@@ -3,6 +3,7 @@ import React from 'react'
 export default function About(props) {
   return (
     <div className="accordion container my-5" id="accordionExample">
+      <h1 style={{color: props.clr}}>About Us</h1>
     <div className="accordion-item" style={props.aboutclr}>
       <h2 className="accordion-header" id="headingOne">
         <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style={props.aboutclr}>

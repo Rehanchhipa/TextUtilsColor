@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import './Navbar.css';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 export default function Navbar(props) {
 
@@ -9,9 +9,10 @@ export default function Navbar(props) {
     <>
       <nav
         className={`navbar navbar-expand-lg navbar-${props.modenav} bg-${props.mode}`}
-        style={{color: "red !important"}}
+        style={{ color: "red !important" }}
       >
         <div className="container-fluid">
+
           <Link className="navbar-brand" to="/">
             {props.title}
           </Link>
@@ -26,8 +27,10 @@ export default function Navbar(props) {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
+
           <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
+            
+            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to="/">
                   Home
@@ -39,17 +42,18 @@ export default function Navbar(props) {
                 </Link>
               </li>
             </ul>
-          </div>
-
-          <div className="d-flex me-4">
-            <div className="clr1 me-2" onClick={props.primary} style={{border: `1px solid ${props.clr}`}}>
-            </div>
-            <div className="clr2 me-2" onClick={props.dark} style={{border: `1px solid ${props.clr}`}}>
-            </div>
-            <div className="clr3 me-2" onClick={props.warning} style={{border: `1px solid ${props.clr}`}}>
-            </div>
-            <div className="clr4 me-2" onClick={props.light} style={{border: `1px solid ${props.clr}`}}>
-            </div>
+            
+            <div className="d-flex">
+              <div className="clr1 me-2 d-flex justify-content-end" onClick={props.primary} style={{ border: `1px solid ${props.clr}` }}>
+              </div>
+              <div className="clr2 me-2 d-flex justify-content-end" onClick={props.dark} style={{ border: `1px solid ${props.clr}` }}>
+              </div>
+              <div className="clr3 me-2 d-flex justify-content-end" onClick={props.warning} style={{ border: `1px solid ${props.clr}` }}>
+              </div>
+              <div className="clr4 me-2 d-flex justify-content-end" onClick={props.light} style={{ border: `1px solid ${props.clr}` }}>
+              </div>
+              </div>
+            
           </div>
         </div>
       </nav>

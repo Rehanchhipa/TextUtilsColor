@@ -65,7 +65,7 @@ export default function Textform(props) {
          onClick={handleRemoveSpace}>Remove Exter Space</button>
       </div>
       <div className="container" style={{color: props.clr}}>
-        <p><b>{text.split(/[ ]+/).filter((text) => text).length}</b> Word and <b>{text.length}</b> Character</p>
+        <p><b>{text.split(/[ ]+/).filter((text) => text).length}</b> Word and <b>{text.split(/\s+/).join("").length}</b> Character</p>
         <p><b>{0.008 * text.split(/[ ]+/).filter((text) => text).length }</b> Minutes Read</p>
         <h3>preview</h3>
         <h6>{text.length >0 ? text : "Enter somethings in the textbox above to preview it here"}</h6>

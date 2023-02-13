@@ -34,7 +34,7 @@ function App() {
   setclr("white")
   setmodenav("dark")
   showalert("success", "Primary mode enable")
-  setaboutclr({backgroundColor: "#5292d5", color: "white", borderColor: "white"})
+  setaboutclr({backgroundColor: "#0d6efd", color: "white", borderColor: "white"})
  
   setInterval(() => {
     document.title = "TextUtils-primary"
@@ -53,7 +53,7 @@ function App() {
   setmodenav("dark")
   showalert("success", "dark mode enable")
   document.title = "TextUtils-dark"
-  setaboutclr({backgroundColor: "#343333", color: "white", borderColor: "white"})
+  setaboutclr({backgroundColor: "#212529", color: "white", borderColor: "white"})
  
  }
  const warning = () => {
@@ -65,7 +65,7 @@ function App() {
   setmodenav("light")
   showalert("success", "warning mode enable")
   document.title = "TextUtils-warning"
-  setaboutclr({backgroundColor: "#ffd65c", color: "black", borderColor: "black"})
+  setaboutclr({backgroundColor: "#ffc107", color: "black", borderColor: "black"})
  
  }
  const light = () => {
@@ -77,7 +77,7 @@ function App() {
   setmodenav("light")
   showalert("success", "light mode enable")
   document.title = "TextUtils-Home"
-  setaboutclr({backgroundColor: "white", color: "black", borderColor: "black"})
+  setaboutclr({backgroundColor: "#f8f9fa", color: "black", borderColor: "black"})
  
  }  
 
@@ -96,7 +96,7 @@ function App() {
     <Alert alert={alert}/>
     <Routes>
       <Route path='/' element={<Textform showalert={showalert} bg={bg} clr={clr} mode={mode} bghi={bghi}/>}/>
-      <Route path='/about' element={<About aboutclr={aboutclr}/>} />
+      <Route path='/about' element={<About aboutclr={aboutclr} clr={clr}/>} />
 
     </Routes>
     
